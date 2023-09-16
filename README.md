@@ -29,7 +29,7 @@ Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display.
 - Battery or Power Supply
 
 - ## Drivers used
-- **HAL**: LCD - Keypad - Buzzer - Led
+- **HAL**: LCD - Keypad - Buzzer - Led - LM35
 - **MCAL** : DIO - ADC
 
 
