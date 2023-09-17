@@ -16,7 +16,7 @@ Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display.
 
 - **LCD Display**: Clear and easy-to-read LCD screen for displaying real-time temperature readings.
 
-- **Customizable Threshold**: Users can set their desired temperature threshold for triggering alerts, allowing flexibility for different applications..
+- **Customizable Threshold**: Users can set their desired temperature threshold for triggering alerts, allowing flexibility for different applications.
 
 ## Hardware Requirements
 
@@ -24,13 +24,14 @@ Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display.
 - LCD Display
 - Keypad
 - LEDs
+- LM35
 - Diodes
 - Buzzer
 - Battery or Power Supply
 
 - ## Drivers used
 - **HAL**: LCD - Keypad - Buzzer - Led - LM35
-- **MCAL** : DIO - ADC
+- **MCAL**: DIO - ADC - External Interrupt
 
 
 - ## Scenarios
