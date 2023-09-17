@@ -37,4 +37,6 @@ Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display.
 - ## Scenarios
 
 
+https://github.com/Ibrahim-Elsayed-27/Temperature-Meter/assets/95621621/793f92b9-7b64-4d83-8222-ae11743600b3
+
 
