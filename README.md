@@ -12,7 +12,7 @@ Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display.
 
 - **Temperature Measurement**: Accurate measurement of temperatures in the range of -50°C to 155°C using the LM35 sensor.
 
-- **Temperature Alert System**: Real-time alerts and notifications when the temperature falls below zero degrees Celsius, ensuring early detection of freezing conditions.
+- **Temperature Alert System**: Real-time alerts and notifications when the temperature exceeds the threshold value.
 
 - **LCD Display**: Clear and easy-to-read LCD screen for displaying real-time temperature readings.
 
