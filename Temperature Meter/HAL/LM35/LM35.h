@@ -11,13 +11,14 @@
 
 #include "../../Std_Macros.h"
 
+
 /*mode*/
 #define NEGATIVE_POSITVE
 #define REFRENCE_VOLTAGE 2.56
 
 
 
-void lm35_init(uint8 pin1, uint8 pin2);
+void lm35_init(uint8 pin1, uint8 pin2, void (*thresh_callback) (void));
 uint16 lm35_read(uint8 mux);
 
 

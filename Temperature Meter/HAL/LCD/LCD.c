@@ -6,8 +6,9 @@
  */ 
 
 #include "LCD.h"
-#include <util/delay.h>
 #define   F_CPU 8000000UL
+#include <util/delay.h>
+
 
 
 void lcd_init(){

@@ -36,20 +36,24 @@ SUBDIRS :=  \
 ../HAL/LM35 \
 ../HAL/LED \
 ../HAL/LCD \
+../HAL/KEYPAD \
 ../MCAL \
 ../HAL \
 ../MCAL/DIO \
-../MCAL/ADC
+../MCAL/ADC \
+../MCAL/EXTERNAL\ INTERRUPT
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../HAL/KEYPAD/keypad.c \
 ../HAL/LCD/LCD.c \
 ../HAL/LED/LED.c \
 ../HAL/LM35/LM35.c \
 ../main.c \
 ../MCAL/ADC/ADC.c \
-../MCAL/DIO/DIO.c
+../MCAL/DIO/DIO.c \
+../MCAL/EXTERNAL\ INTERRUPT/EXTERNAL_INTERRUPT.c
 
 
 PREPROCESSING_SRCS += 
@@ -59,36 +63,44 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+HAL/KEYPAD/keypad.o \
 HAL/LCD/LCD.o \
 HAL/LED/LED.o \
 HAL/LM35/LM35.o \
 main.o \
 MCAL/ADC/ADC.o \
-MCAL/DIO/DIO.o
+MCAL/DIO/DIO.o \
+MCAL/EXTERNAL\ INTERRUPT/EXTERNAL_INTERRUPT.o
 
 OBJS_AS_ARGS +=  \
+HAL/KEYPAD/keypad.o \
 HAL/LCD/LCD.o \
 HAL/LED/LED.o \
 HAL/LM35/LM35.o \
 main.o \
 MCAL/ADC/ADC.o \
-MCAL/DIO/DIO.o
+MCAL/DIO/DIO.o \
+"MCAL/EXTERNAL INTERRUPT/EXTERNAL_INTERRUPT.o"
 
 C_DEPS +=  \
+HAL/KEYPAD/keypad.d \
 HAL/LCD/LCD.d \
 HAL/LED/LED.d \
 HAL/LM35/LM35.d \
 main.d \
 MCAL/ADC/ADC.d \
-MCAL/DIO/DIO.d
+MCAL/DIO/DIO.d \
+MCAL/EXTERNAL\ INTERRUPT/EXTERNAL_INTERRUPT.d
 
 C_DEPS_AS_ARGS +=  \
+HAL/KEYPAD/keypad.d \
 HAL/LCD/LCD.d \
 HAL/LED/LED.d \
 HAL/LM35/LM35.d \
 main.d \
 MCAL/ADC/ADC.d \
-MCAL/DIO/DIO.d
+MCAL/DIO/DIO.d \
+"MCAL/EXTERNAL INTERRUPT/EXTERNAL_INTERRUPT.d"
 
 OUTPUT_FILE_PATH +=Temperature\ Meter.elf
 
@@ -104,6 +116,13 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+HAL/KEYPAD/keypad.o: ../HAL/KEYPAD/keypad.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 HAL/LCD/LCD.o: ../HAL/LCD/LCD.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -140,6 +159,13 @@ MCAL/ADC/ADC.o: ../MCAL/ADC/ADC.c
 	
 
 MCAL/DIO/DIO.o: ../MCAL/DIO/DIO.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+MCAL/EXTERNAL\ INTERRUPT/EXTERNAL_INTERRUPT.o: ../MCAL/EXTERNAL\ INTERRUPT/EXTERNAL_INTERRUPT.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

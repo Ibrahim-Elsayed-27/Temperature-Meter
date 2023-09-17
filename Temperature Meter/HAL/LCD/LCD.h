@@ -24,7 +24,7 @@
 #elif defined FOUR_BIT_MODE
 #define FOUR_BIT_CMD         0x28
 #define DATA_PORT            PORT_D
-#define DATA_NIBBLE          LOW_NIBBLE
+#define DATA_NIBBLE          HIGH_NIBBLE
 #define CONTROL_PORT         PORT_B
 #define ENABLE_PIN           PIN0
 #define READ_WRITE_PIN       PIN1
