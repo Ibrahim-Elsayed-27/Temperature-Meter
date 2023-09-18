@@ -1,5 +1,5 @@
 # Temperature-Meter
-Temperature Meter (-50 - 155) celsius using LM35, Atmega32 and LCD for Display. 
+Welcome to Temperature-Meter, your gateway to precision temperature measurement. Powered by the ATmega32 microcontroller and LM35 sensor, this project is ideal for healthcare, industrial processes, climate control, and agriculture, ensuring accurate temperature monitoring where it matters most.
 
 ## Table of Contents
 
